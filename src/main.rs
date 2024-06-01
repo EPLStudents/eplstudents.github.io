@@ -1,5 +1,6 @@
 use maud::{html, Markup, PreEscaped};
 use css_minify::optimizations::{Minifier, Level};
+use rocket::response::Redirect;
 use rocket::{get, routes, launch};
 use rocket::fs::FileServer;
 
@@ -114,11 +115,16 @@ fn index() -> Markup {
 	})
 }
 
+#[get("/discord")]
+fn discord() -> Redirect {
+    Redirect::to("https://discord.gg/3ZH2YWhsCa")
+}
+
 #[launch]
 fn rocket() -> _ {
 	let rocket = rocket::build();
 
 	rocket
-		.mount("/", routes![index])
+		.mount("/", routes![index, discord])
 		.mount("/public", FileServer::from(relative!("/public")))
 }
