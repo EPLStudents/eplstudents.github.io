@@ -29,8 +29,8 @@ fn base(content: Markup) -> Markup {
                 meta name="robots" content="index, follow";
                 meta name="theme-color" content="#000000";
                 meta name="viewport" content="width=device-width, initial-scale=1.0";
-                meta http-equiv="keywords" name="keywords" content="Discord, discord, epl, students, école, polytechnique, louvain, ingénieur, cercle, industriel";
-                meta http-equiv="description" name="description" content="EPLStudents est un site recensant les projets de la communauté étudiante de l'EPL.";
+                meta http-equiv="keywords" name="keywords" content="Discord, discord, epl, students, école, polytechnique, louvain, ingénieur, cercle, industriel, uclouvain";
+                meta http-equiv="description" name="description" content="EPLStudents est un site recensant les liens utiles et les projets de la communauté étudiante de l'EPL.";
                 meta http-equiv="cache-control" content="no-cache";
                 meta http-equiv="pragma" content="no-cache";
                 
@@ -81,6 +81,8 @@ fn button(handle: &'static str, link: &'static str, icon: PreEscaped<&str>) -> M
 
 const EPLWIKI_IMG_SRC:   &str = "/public/thumbnails/eplwiki.png";
 const DISCORD_IMG_SRC:   &str = "/public/thumbnails/discord.png";
+const UCLOUVAINDOWN_IMG_SRC: &str = "/public/thumbnails/uclouvain-down.png";
+const REVUE_IMG_SRC: &str = "/public/thumbnails/revue.png";
 
 #[get("/")]
 fn index() -> Markup {
@@ -101,6 +103,14 @@ fn index() -> Markup {
 
 					(project("Discord EPL", "https://discord.epl-students.be", DISCORD_IMG_SRC, html! {
 						"Le Discord des étudiants ingénieurs de l'EPL. N'hésitez pas à nous rejoindre !"
+					}))
+
+					(project("UCLouvain Down", "https://www.uclouvain-down.be", UCLOUVAINDOWN_IMG_SRC, html! {
+						"Un site permettant de vérifier le statut des différents services de l'UCLouvain."
+					}))
+
+					(project("La revue des Ingénieurs", "https://revuedesingenieurs.be/", REVUE_IMG_SRC, html! {
+						"La seule et unique revue des ingénieurs ! Vous pourrez retrouver les chansons de la revue, des photos, des archives et bien plus encore !"
 					}))
 				}
 			}
