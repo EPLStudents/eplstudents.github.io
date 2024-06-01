@@ -99,7 +99,7 @@ fn index() -> Markup {
 						"Un recueil d'explications, de conseils et d'astuces sur la vie à l'EPL. "
 					}))
 
-					(project("Discord EPL", "https://discord.epl-students.be", DISCORD_IMG_SRC, html! {
+					(project("Discord EPL", "https://epl-students.be/discord", DISCORD_IMG_SRC, html! {
 						"Le Discord des étudiants ingénieurs de l'EPL. N'hésitez pas à nous rejoindre !"
 					}))
 				}
