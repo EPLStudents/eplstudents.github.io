@@ -33,6 +33,10 @@ fn base(content: Markup) -> Markup {
                 meta http-equiv="description" name="description" content="EPLStudents est un site recensant les liens utiles et les projets de la communauté étudiante de l'EPL.";
                 meta http-equiv="cache-control" content="no-cache";
                 meta http-equiv="pragma" content="no-cache";
+				meta name="author" content="EPLStudents";
+				meta name="og:title" content="EPLStudents";
+				meta name="og:description" content="EPLStudents est un site recensant les liens utiles et les projets de la communauté étudiante de l'EPL.";
+				meta name="og:image" content="https://epl-students.be/public/thumbnails/eplwiki.png";
                 
                 link rel="icon" href="/public/favicon.ico";
 
