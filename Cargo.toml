@@ -1,0 +1,15 @@
+[package]
+name = "eplstudents-website"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "eplstudents-website"
+path = "src/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.5.0-rc.3"
+maud = { git = "https://github.com/mbr/maud.git", branch = "mbr/rocket-0.5.0-rc.1", features = ["rocket"] }
+css-minify = "0.3.1"
