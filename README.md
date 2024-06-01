@@ -28,4 +28,4 @@ git push origin $(git subtree split --prefix static):gh-pages -f
 
 ### Note
 
-A huge part of this code base has been heavily inspired by [obiwac](https://obiw.ac)'s personal website.
+A huge part of this code base has been heavily inspired by [obiwac](https://obiw.ac)'s beautiful personal website.
