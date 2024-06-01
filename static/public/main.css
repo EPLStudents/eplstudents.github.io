@@ -26,11 +26,6 @@
     src: url(/public/fonts/Cascadia.ttf);
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-}
-
 body {
 	background-color: var(--background-colour);
 	color: var(--text-colour);
@@ -85,6 +80,7 @@ a {
 	max-width: 950px;
 	margin: auto;
 	padding: 32px;
+    min-height:100%;
 }
 
 .projects {
