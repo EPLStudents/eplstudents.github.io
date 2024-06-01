@@ -79,8 +79,9 @@ fn button(handle: &'static str, link: &'static str, icon: PreEscaped<&str>) -> M
 	}
 }
 
-const EPLWIKI_IMG_SRC:   &str = "/public/thumbnails/eplwiki.png";
-const DISCORD_IMG_SRC:   &str = "/public/thumbnails/discord.png";
+const EPLWIKI_IMG_SRC:   		&str = "/public/thumbnails/eplwiki.png";
+const DISCORD_IMG_SRC:   		&str = "/public/thumbnails/discord.png";
+const DISCORD_SINF_IMG_SRC:   	&str = "/public/thumbnails/discord_sinf.png";
 
 #[get("/")]
 fn index() -> Markup {
@@ -102,6 +103,10 @@ fn index() -> Markup {
 					(project("Discord EPL", "https://discord.epl-students.be", DISCORD_IMG_SRC, html! {
 						"Le Discord des étudiants ingénieurs de l'EPL. N'hésitez pas à nous rejoindre !"
 					}))
+
+					(project("Discord SINF", "https://discord.gg/eR3WcnPBxt", DISCORD_SINF_IMG_SRC, html! {
+						"Le Discord des étudiants SINF de l'EPL. N'hésitez pas à nous rejoindre !"
+					}))
 				}
 			}
 
@@ -118,6 +123,11 @@ fn index() -> Markup {
 #[get("/discord")]
 fn discord() -> Redirect {
     Redirect::to("https://discord.gg/3ZH2YWhsCa")
+}
+
+#[get("/discord_SINF")]
+fn discord_sinf() -> Redirect {
+    Redirect::to("https://discord.gg/eR3WcnPBxt")
 }
 
 #[launch]

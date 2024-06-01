@@ -14,6 +14,10 @@ cp CNAME static/CNAME
 mkdir static/discord/
 cp discord.html static/discord/index.html
 
+mkdir static/discord_SINF/
+cp discord_sinf.html static/discord_SINF/index.html
+
+
 killall eplstudents-website || true
 cargo run &
 sleep 2
