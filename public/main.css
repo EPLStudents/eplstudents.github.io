@@ -26,6 +26,10 @@
     src: url(/public/fonts/Cascadia.ttf);
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
 
 body {
 	background-color: var(--background-colour);
