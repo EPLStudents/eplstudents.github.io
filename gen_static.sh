@@ -11,6 +11,9 @@ mkdir -p static
 cp -r public static/public
 cp CNAME static/CNAME
 
+mkdir static/discord/
+cp discord.html static/discord/index.html
+
 killall eplstudents-website || true
 cargo run &
 sleep 2
