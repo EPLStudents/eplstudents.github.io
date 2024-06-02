@@ -19,6 +19,8 @@ cargo run &
 sleep 2
 
 port=$(lsof -i -P -n | grep LISTEN  | grep eplstuden | cut -d: -f2 | cut -d' ' -f1)
+echo "Port: $port"
+lsof -i -P -n | grep LISTEN
 
 for route in $ROUTES; do
 	mkdir -p static$route
