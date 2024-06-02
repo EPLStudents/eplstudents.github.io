@@ -30,5 +30,7 @@ echo "Port: $port"
 #	mkdir -p static$route
 #	curl http://localhost:$port$route -o static$route/index.html
 #done
-
-kill %1
+jobs=$(jobs -p | cut -d+ -f2 | cut -d' ' -f2)
+if [[ $jobs]]; then 
+	kill $jobs
+fi
