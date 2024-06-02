@@ -27,6 +27,6 @@ echo "Port: $port"
 #	curl http://localhost:$port$route -o static$route/index.html
 #done
 jobs=$(jobs -p | cut -d+ -f2 | cut -d' ' -f2)
-if [[ $jobs ]]; then 
+if [ $jobs ]; then 
 	kill $jobs
 fi
