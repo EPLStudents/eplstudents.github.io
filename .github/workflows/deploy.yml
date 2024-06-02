@@ -22,7 +22,7 @@ jobs:
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
       
     - name: Run gen_static.sh script
-      run: ./gen_static.sh
+      run: sh gen_static.sh
 
     - name: Push to gh-pages branch
       run: |
