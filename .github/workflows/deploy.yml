@@ -29,6 +29,8 @@ jobs:
       run: |
         git add -f static/
         git commit -m "Update static content"
-        git push github_origin $(git subtree split --prefix static master):gh-pages -f
+        if [[ `git status --porcelain` ]]; then
+            git push github_origin $(git subtree split --prefix static master):gh-pages -f
+        fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
