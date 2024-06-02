@@ -20,7 +20,7 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git remote add github_origin https://EPLStudents:${{secrets.CI_HOKKAYDO_ACCESS_TOKEN}}@github.com/eplstudents.github.io
+        git remote add github_origin https://EPLStudents:${{secrets.CI_HOKKAYDO_ACCESS_TOKEN}}@github.com/EPLStudents/eplstudents.github.io
       
     - name: Run gen_static.sh script
       run: sh gen_static.sh
