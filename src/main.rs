@@ -119,7 +119,7 @@ fn index() -> Markup {
 						"La seule et unique revue des ingénieurs ! Vous pourrez retrouver les chansons de la revue, des photos, des archives et bien plus encore !"
 					}))
           
-					(project("Discord SINF", "https://discord.gg/eR3WcnPBxt", DISCORD_SINF_IMG_SRC, html! {
+					(project("Discord sinf", "https://discord.gg/eR3WcnPBxt", DISCORD_SINF_IMG_SRC, html! {
 						"Le Discord des étudiants en sciences informatiques de l'EPL. N'hésitez pas à nous rejoindre !"
 					}))
 				}
@@ -138,11 +138,6 @@ fn index() -> Markup {
 #[get("/discord")]
 fn discord() -> Redirect {
     Redirect::to("https://discord.gg/3ZH2YWhsCa")
-}
-
-#[get("/discord_SINF")]
-fn discord_sinf() -> Redirect {
-    Redirect::to("https://discord.gg/eR3WcnPBxt")
 }
 
 #[launch]
