@@ -20,6 +20,7 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        giti remote add github_origin https://EPLStudents:${{secrets.CI_HOKKAYDO_ACCESS_TOKEN}}@github.com/eplstudents.github.io
       
     - name: Run gen_static.sh script
       run: sh gen_static.sh
@@ -28,6 +29,6 @@ jobs:
       run: |
         git add -f static/
         git commit -m "Update static content"
-        git push origin $(git subtree split --prefix static master):gh-pages -f
+        git push github_origin $(git subtree split --prefix static master):gh-pages -f
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
