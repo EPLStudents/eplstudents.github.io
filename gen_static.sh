@@ -19,14 +19,12 @@ cargo build
 cargo run &
 sleep 2
 
-echo $(lsof -i -P -n || false)
-
 port=$(lsof -i -P -n | grep LISTEN  | grep eplstuden | cut -d: -f2 | cut -d' ' -f1)
 echo "Port: $port"
 
-#for route in $ROUTES; do
-#	mkdir -p static$route
-#	curl http://localhost:$port$route -o static$route/index.html
-#done
+for route in $ROUTES; do
+	mkdir -p static$route
+	curl http://localhost:$port$route -o static$route/index.html
+done
 
-kill $(jobs -p)
+kill %1
