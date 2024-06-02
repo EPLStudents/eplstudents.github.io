@@ -22,9 +22,9 @@ port=$(lsof -i -P -n | grep LISTEN  | grep eplstuden | cut -d: -f2 | cut -d' ' -
 echo "Port: $port"
 lsof -i -P -n | grep LISTEN
 
-for route in $ROUTES; do
-	mkdir -p static$route
-	curl http://localhost:$port$route -o static$route/index.html
-done
+#for route in $ROUTES; do
+#	mkdir -p static$route
+#	curl http://localhost:$port$route -o static$route/index.html
+#done
 
-kill $(jobs -p)
+#kill $(jobs -p)
