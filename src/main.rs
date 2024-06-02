@@ -119,9 +119,9 @@ fn index() -> Markup {
 						"La seule et unique revue des ingénieurs ! Vous pourrez retrouver les chansons de la revue, des photos, des archives et bien plus encore !"
 					}))
           
-          (project("Discord SINF", "https://discord.gg/eR3WcnPBxt", DISCORD_SINF_IMG_SRC, html! {
-						"Le Discord des étudiants SINF de l'EPL. N'hésitez pas à nous rejoindre !"
-          }))
+					(project("Discord SINF", "https://discord.gg/eR3WcnPBxt", DISCORD_SINF_IMG_SRC, html! {
+						"Le Discord des étudiants en sciences informatiques de l'EPL. N'hésitez pas à nous rejoindre !"
+					}))
 				}
 			}
 
