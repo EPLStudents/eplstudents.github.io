@@ -15,6 +15,7 @@ mkdir static/discord/
 cp discord.html static/discord/index.html
 
 killall eplstudents-website || true
+cargo build
 cargo run &
 sleep 2
 
@@ -28,4 +29,4 @@ echo "Port: $port"
 #	curl http://localhost:$port$route -o static$route/index.html
 #done
 
-#kill $(jobs -p)
+kill $(jobs -p)
