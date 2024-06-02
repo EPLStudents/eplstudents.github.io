@@ -18,9 +18,11 @@ killall eplstudents-website || true
 cargo run &
 sleep 2
 
+port=$(lsof -i -P -n | grep LISTEN  | grep eplstuden | cut -d: -f2 | cut -d' ' -f1)
+
 for route in $ROUTES; do
 	mkdir -p static$route
-	fetch http://localhost:8000$route -o static$route/index.html
+	fetch http://localhost:$port$route -o static$route/index.html
 done
 
 kill $(jobs -p)
