@@ -182,39 +182,26 @@ a {
 
 .learn-more {
 	margin-inline: 16px;
-	margin-bottom: 16px;
+	margin: 0 0 16px;
 	padding: 4px;
 	display: flex;
 	align-items: center;
 	border-radius: 4px;
 	cursor: pointer;
-	transition: background 0.1s ease-in-out;
-}
-
-.learn-more p {
-	margin: 0;
-}
-
-.learn-more svg {
-	margin-right: 16px;
-	width: 24px;
+	transition: all 0.1s ease-in-out;
+	color: var(--muted-colour);
 }
 
 .learn-more:hover {
 	background: var(--text-colour);
 }
 
-.learn-more p, .learn-more svg {
-	color: var(--muted-colour);
-	transition: color 0.1s ease-in-out;
-}
-
-.project:hover .learn-more p, .project:hover .learn-more svg {
+.project:hover .learn-more, .project:hover {
 	font-weight: bold;
 	color: var(--text-colour);
 }
 
-.learn-more:hover p, .learn-more:hover svg {
+.learn-more:hover {
 	color: var(--background-colour) !important;
 }
 

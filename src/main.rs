@@ -57,7 +57,7 @@ fn project(title: &'static str, link: &'static str, img_src: &'static str, descr
 	let alt: &str = &(title.to_owned() + " thumbnail");
 
 	html! {
-		.project {
+		a.project href=(link) {
 			.labeled-img {
 				img alt=(alt) src=(img_src);
 				div {
@@ -67,8 +67,8 @@ fn project(title: &'static str, link: &'static str, img_src: &'static str, descr
 				}
 			}
 			p { (descr) }
-			a.learn-more href=(link) {
-				p { "Voir" }
+			p.learn-more  {
+				"Voir"
 			}
 		}
 	}
