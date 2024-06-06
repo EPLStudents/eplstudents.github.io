@@ -32,7 +32,6 @@ body {
 	margin: 0;
 
 	font-size: 20px;
-	font-display: optional;
 	font-family: "Cascadia", "Noto Color Emoji", sans-serif;
 	word-break: break-word;
 }
@@ -65,8 +64,6 @@ a {
 }
 
 .link {
-	background: var(--gradient);
-	background-clip: none;
 	color: var(--background-colour);
 	font-weight: bold;
 	border-radius: 3px;
@@ -182,7 +179,8 @@ a {
 
 .learn-more {
 	margin-inline: 16px;
-	margin: 0 0 16px;
+	margin: 0;
+	margin-bottom: 16px;
 	padding: 4px;
 	display: flex;
 	align-items: center;
