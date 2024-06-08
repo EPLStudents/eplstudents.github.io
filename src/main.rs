@@ -83,10 +83,12 @@ fn button(handle: &'static str, link: &'static str, icon: PreEscaped<&str>) -> M
 	}
 }
 
+
 const EPLWIKI_IMG_SRC:   &str = "/public/thumbnails/eplwiki.png";
 const DISCORD_IMG_SRC:   &str = "/public/thumbnails/discord.png";
 const UCLOUVAINDOWN_IMG_SRC: &str = "/public/thumbnails/uclouvain-down.png";
 const REVUE_IMG_SRC: &str = "/public/thumbnails/revue.png";
+const DISCORD_SINF_IMG_SRC:   	&str = "/public/thumbnails/discord_sinf.png";
 
 #[get("/")]
 fn index() -> Markup {
@@ -115,6 +117,10 @@ fn index() -> Markup {
 
 					(project("La revue des Ingénieurs", "https://revuedesingenieurs.be/", REVUE_IMG_SRC, html! {
 						"La seule et unique revue des ingénieurs ! Vous pourrez retrouver les chansons de la revue, des photos, des archives et bien plus encore !"
+					}))
+          
+					(project("Discord sinf", "https://discord.gg/eR3WcnPBxt", DISCORD_SINF_IMG_SRC, html! {
+						"Le Discord des étudiants en sciences informatiques de l'EPL. N'hésitez pas à nous rejoindre !"
 					}))
 				}
 			}
