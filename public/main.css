@@ -120,11 +120,10 @@ a {
 	}
 }
 
-.project p {
+.project > p {
 	margin-inline: 16px;
 	margin-top: 32px;
 	margin-bottom: 16px;
-
 	font-size: 18px;
 }
 
@@ -179,7 +178,6 @@ a {
 
 .learn-more {
 	margin-inline: 16px;
-	margin: 0;
 	margin-bottom: 16px;
 	padding: 4px;
 	display: flex;
@@ -192,6 +190,10 @@ a {
 
 .learn-more:hover {
 	background: var(--text-colour);
+}
+
+.learn-more p {
+	margin: 0;
 }
 
 .project:hover .learn-more, .project:hover {

@@ -57,7 +57,7 @@ fn project(title: &'static str, link: &'static str, img_src: &'static str, descr
 	let alt: &str = &(title.to_owned() + " thumbnail");
 
 	html! {
-		a.project href=(link) {
+		.project {
 			.labeled-img {
 				img alt=(alt) src=(img_src);
 				div {
@@ -67,8 +67,8 @@ fn project(title: &'static str, link: &'static str, img_src: &'static str, descr
 				}
 			}
 			p { (descr) }
-			p.learn-more  {
-				"Voir"
+			a.learn-more href=(link) {
+				p { "Voir" }
 			}
 		}
 	}
@@ -89,6 +89,7 @@ const UCLOUVAINDOWN_IMG_SRC: &str = "/public/thumbnails/uclouvain-down.png";
 const REVUE_IMG_SRC: &str = "/public/thumbnails/revue.png";
 const ICPC_IMG_SRC: &str = "/public/thumbnails/icpc.png";
 const DEF_CON_GROUP_3210_IMG_SRC: &str = "/public/thumbnails/defcon.png";
+const ADE_SCHEDULER_IMG_SRC: &str = "/public/thumbnails/ade-scheduler.jpg";
 
 #[get("/")]
 fn index() -> Markup {
@@ -125,6 +126,9 @@ fn index() -> Markup {
 						"Le DEF CON GROUP 3210 est un groupe de sécurité informatique étudiant. Sur leur Discord, vous retrouverez de nombreux étudiants passionés par la sécurité informatique ainsi
 						que des acteurs de la sécurité informatique en Belgique."
 					}))
+					(project("ADE-Scheduler", "https://ade-scheduler.info.ucl.ac.be/", ADE_SCHEDULER_IMG_SRC, html! {
+						"Un outil graphique de gestion d'emploi de temps basé sur l'API ADE de l'UCLouvain."
+					}))
 				}
 			}
 
@@ -151,3 +155,4 @@ fn rocket() -> _ {
 		.mount("/", routes![index, discord])
 		.mount("/public", FileServer::from(relative!("/public")))
 }
+
