@@ -87,6 +87,8 @@ const EPLWIKI_IMG_SRC:   &str = "/public/thumbnails/eplwiki.png";
 const DISCORD_IMG_SRC:   &str = "/public/thumbnails/discord.png";
 const UCLOUVAINDOWN_IMG_SRC: &str = "/public/thumbnails/uclouvain-down.png";
 const REVUE_IMG_SRC: &str = "/public/thumbnails/revue.png";
+const ICPC_IMG_SRC: &str = "/public/thumbnails/icpc.png";
+const DEF_CON_GROUP_3210_IMG_SRC: &str = "/public/thumbnails/defcon.png";
 
 #[get("/")]
 fn index() -> Markup {
@@ -115,6 +117,13 @@ fn index() -> Markup {
 
 					(project("La revue des Ingénieurs", "https://revuedesingenieurs.be/", REVUE_IMG_SRC, html! {
 						"La seule et unique revue des ingénieurs ! Vous pourrez retrouver les chansons de la revue, des photos, des archives et bien plus encore !"
+					}))
+					(project("ICPC UCLouvain", "https://alexisenglebert.github.io/", ICPC_IMG_SRC, html! {
+						"L'ICPC UCLouvain est le club de programmation compétitive de l'UCLouvain. Vous trouverez plus de détails sur leur site officiel."
+					}))
+					(project("DEF CON GROUP 3210", "https://discord.gg/FR3MQemNKV", DEF_CON_GROUP_3210_IMG_SRC, html !{
+						"Le DEF CON GROUP 3210 est un groupe de sécurité informatique étudiant. Sur leur Discord, vous retrouverez de nombreux étudiants passionés par la sécurité informatique ainsi
+						que des acteurs de la sécurité informatique en Belgique."
 					}))
 				}
 			}
