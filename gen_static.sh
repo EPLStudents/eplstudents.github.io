@@ -24,7 +24,7 @@ echo "Port: $port"
 
 for route in $ROUTES; do
 	mkdir -p static$route
-	curl http://localhost:$port$route -o static$route/index.html
+	curl http://localhost:$port$route -o 'static'$route'index.html'
 done
 
 jobs=$(jobs -p | cut -d+ -f2 | cut -d' ' -f2)
