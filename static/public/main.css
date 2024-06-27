@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+/* default is light for the accessibility ting */
+
+:root {
+	--background-colour: #ffffff;
+	--title-colour: #000000;
+	--text-colour: #000000;
+	--muted-colour: #555555;
+	--border-radius: 12px;
+	--code-background: #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-colour: #000000;
+		--title-colour: #ffffff;
+		--text-colour: #dddddd;
+		--muted-colour: #999999;
+		--code-background: #1a1a1a;
+	}
+}
+
+@font-face {
+    font-family: "Cascadia";
+    src: url(/public/fonts/Cascadia.ttf);
+}
+
+body {
+	background-color: var(--background-colour);
+	color: var(--text-colour);
+	margin: 0;
+
+	font-size: 20px;
+	font-family: "Cascadia", "Noto Color Emoji", sans-serif;
+	word-break: break-word;
+}
+
+footer {
+    text-align: center;
+    padding: 16px;
+}
+
+h1 {
+	color: var(--title-colour);
+	font-size: 72px;
+	margin-block: 16px;
+}
+
+code {
+	border-radius: 8px;
+	background-color: var(--code-background);
+}
+
+.inline-svg svg {
+	width: 24px;
+	margin: 4px;
+	margin-bottom: -4px;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-colour);
+}
+
+.link {
+	color: var(--background-colour);
+	font-weight: bold;
+	border-radius: 3px;
+}
+
+.link:hover {
+	background: var(--text-colour);
+}
+
+.container {
+	max-width: 950px;
+	margin: auto;
+	padding: 32px;
+    min-height:100%;
+}
+
+.projects {
+	display: flex;
+    flex-direction: row;
+	justify-content: space-around;
+	align-items: start;
+    flex-wrap: wrap;
+	padding-block: 32px;
+	padding-inline: 4px;
+	row-gap: 12px;
+}
+
+.project {
+	max-width: 280px;
+	margin: 16px;
+	border-radius: var(--border-radius);
+	transition: transform 0.1s ease-in-out, background 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+	.project {
+		max-width: 308px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.project {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.projects {
+		padding-inline: 0;
+	}
+
+	.project {
+		margin-inline: 0;
+	}
+}
+
+.project > p {
+	margin-inline: 16px;
+	margin-top: 32px;
+	margin-bottom: 16px;
+	font-size: 18px;
+}
+
+.project:hover {
+	background: var(--code-background);
+	transform: scale(105%);
+}
+
+.labeled-img {
+	max-width: 100%;
+	position: relative;
+	transition: transform 0.1s ease-in-out;
+}
+
+.project:hover .labeled-img {
+	transform: scale(105%);
+}
+
+.labeled-img div {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70%;
+	background: linear-gradient(to bottom, transparent, var(--background-colour));
+	border-radius: var(--border-radius);
+}
+
+.labeled-img div {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+}
+
+.labeled-img div div h2 {
+	color: white;
+	margin-inline: 32px;
+}
+
+.labeled-img div div svg {
+	color: white;
+	width: 24px;
+	margin-left: -16px;
+}
+
+.labeled-img img {
+	aspect-ratio: 8 / 5;
+	object-fit: cover;
+	width: 100%;
+	border-radius: var(--border-radius);
+}
+
+.learn-more {
+	margin-inline: 16px;
+	margin-bottom: 16px;
+	padding: 4px;
+	display: flex;
+	align-items: center;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+	color: var(--muted-colour);
+}
+
+.learn-more:hover {
+	background: var(--text-colour);
+}
+
+.learn-more p {
+	margin: 0;
+}
+
+.project:hover .learn-more, .project:hover {
+	font-weight: bold;
+	color: var(--text-colour);
+}
+
+.learn-more:hover {
+	color: var(--background-colour) !important;
+}
+
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-block: 32px;
+	padding-inline: 8px;
+	column-gap: 24px;
+	row-gap: 12px;
+}
+
+.button {
+	padding: 4px;
+	display: flex;
+	align-items: center;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background 0.1s ease-in-out;
+}
+
+.button:hover {
+	background: var(--text-colour);
+	color: var(--background-colour);
+}
+
+.button p {
+	font-weight: bold;
+	background: none;
+	margin: 0;
+}
+
+.button svg {
+	margin-right: 16px;
+	width: 32px;
+}
+
+.button p, .social svg {
+	color: var(--text-colour);
+	transition: color 0.1s ease-in-out;
+}
+
+.button:hover p, .button:hover svg{
+    color: var(--background-colour);
+}
+
+.separation {
+    border: var(--text-colour) 1px solid; 
+    width: 100%;
+    margin: 36px 0;
+}
