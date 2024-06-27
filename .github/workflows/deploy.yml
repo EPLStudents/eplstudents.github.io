@@ -1,28 +1,25 @@
-name: Deploy static website to gh-pages branch
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - uses: actions/checkout@v2 # This action checks out your repository
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.9.0'  # Use whatever node version your project requires
 
-    - name: Set up Git
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      
-    - name: Run gen_static.sh script
-      run: sh gen_static.sh
-
-    - name: Push to gh-pages branch
-      run: git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} $(git subtree split --prefix static master):gh-pages -f
+      - name: Run gen_static.sh script
+        run: sh gen_static.sh
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: static # The folder the action should deploy.
+          # You can specify additional configuration here as needed.
