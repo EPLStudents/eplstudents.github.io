@@ -17,7 +17,7 @@ jobs:
       - name: Git fetch all
         run: git fetch --all
       - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: static # The folder the action should deploy.
