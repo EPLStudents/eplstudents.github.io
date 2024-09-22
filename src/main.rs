@@ -90,6 +90,7 @@ const REVUE_IMG_SRC: &str = "/public/thumbnails/revue.png";
 const ICPC_IMG_SRC: &str = "/public/thumbnails/icpc.png";
 const DEF_CON_GROUP_3210_IMG_SRC: &str = "/public/thumbnails/defcon.png";
 const ADE_SCHEDULER_IMG_SRC: &str = "/public/thumbnails/ade-scheduler.jpg";
+const DRIVE_IMG_SRC : &str = "/public/thumbnails/drive.png";
 
 #[get("/")]
 fn index() -> Markup {
@@ -128,6 +129,12 @@ fn index() -> Markup {
 					}))
 					(project("ADE-Scheduler", "https://ade-scheduler.info.ucl.ac.be/", ADE_SCHEDULER_IMG_SRC, html! {
 						"Un outil graphique de gestion d'emploi de temps basé sur l'API ADE de l'UCLouvain."
+					}))					
+					(project("ADE-Scheduler", "https://monhoraire.uclouvain.be/", ADE_SCHEDULER_IMG_SRC, html! {
+						"L'outil de gestion d'horaire officiel de l'UCLouvain. Initialement créé par 3 étudiants ingénieurs de l'EPL."
+					}))
+					(project("Drive EPL", "https://uclouvain-my.sharepoint.com/:f:/g/personal/martin_brans_student_uclouvain_be/EgZKYEd1tThAlv8yvdVhTvkBUzjN2z-dN5jx4wE0a1e94g", DRIVE_IMG_SRC, html! {
+						"Le Drive EPL est un espace de stockage partagé entre les étudiants de l'EPL. Vous y trouverez des documents de cours, des syllabus, des anciens examens pour vous entraîner et bien plus encore."
 					}))
 				}
 			}
