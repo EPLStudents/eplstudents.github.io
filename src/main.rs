@@ -127,9 +127,6 @@ fn index() -> Markup {
 						"Le DEF CON GROUP 3210 est un groupe de sécurité informatique étudiant. Sur leur Discord, vous retrouverez de nombreux étudiants passionés par la sécurité informatique ainsi
 						que des acteurs de la sécurité informatique en Belgique."
 					}))
-					(project("ADE-Scheduler", "https://ade-scheduler.info.ucl.ac.be/", ADE_SCHEDULER_IMG_SRC, html! {
-						"Un outil graphique de gestion d'emploi de temps basé sur l'API ADE de l'UCLouvain."
-					}))					
 					(project("ADE-Scheduler", "https://monhoraire.uclouvain.be/", ADE_SCHEDULER_IMG_SRC, html! {
 						"L'outil de gestion d'horaire officiel de l'UCLouvain. Initialement créé par 3 étudiants ingénieurs de l'EPL."
 					}))
