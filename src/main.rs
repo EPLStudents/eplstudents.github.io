@@ -97,7 +97,7 @@ fn index() -> Markup {
 	base(html! {
 		.container {
 			header {
-				h1 { "EPLStudents" }
+				h1 { "EPLStudents - test building" }
 			}
             .separation {}
 			main {
