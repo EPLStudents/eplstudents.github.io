@@ -10,6 +10,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    concurrency: ci-${{ github.ref }}
     steps:
       - uses: actions/checkout@v4.1.7 # This action checks out your repository
       - name: Run gen_static.sh script
