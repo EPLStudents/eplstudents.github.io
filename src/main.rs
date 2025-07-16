@@ -112,11 +112,9 @@ fn index() -> Markup {
 					(project("Discord EPL", "https://epl-students.be/discord", DISCORD_IMG_SRC, html! {
 						"Le Discord des étudiants ingénieurs de l'EPL. N'hésitez pas à nous rejoindre !"
 					}))
-
-					(project("UCLouvain Down", "https://www.uclouvain-down.be", UCLOUVAINDOWN_IMG_SRC, html! {
-						"Un site permettant de vérifier le statut des différents services de l'UCLouvain."
+					(project("Drive EPL", "https://epl-students.be/drive", DRIVE_IMG_SRC, html! {
+						"Le Drive EPL est un espace de stockage partagé entre les étudiants de l'EPL. Vous y trouverez des documents de cours, des syllabus, des anciens examens pour vous entraîner et bien plus encore."
 					}))
-
 					(project("La revue des Ingénieurs", "https://revuedesingenieurs.be/", REVUE_IMG_SRC, html! {
 						"La seule et unique revue des ingénieurs ! Vous pourrez retrouver les chansons de la revue, des photos, des archives et bien plus encore !"
 					}))
@@ -129,9 +127,6 @@ fn index() -> Markup {
 					}))
 					(project("ADE-Scheduler", "https://monhoraire.uclouvain.be/", ADE_SCHEDULER_IMG_SRC, html! {
 						"L'outil de gestion d'horaire officiel de l'UCLouvain. Initialement créé par 3 étudiants ingénieurs de l'EPL."
-					}))
-					(project("Drive EPL", "https://uclouvain-my.sharepoint.com/:f:/g/personal/martin_brans_student_uclouvain_be/EgZKYEd1tThAlv8yvdVhTvkBUzjN2z-dN5jx4wE0a1e94g", DRIVE_IMG_SRC, html! {
-						"Le Drive EPL est un espace de stockage partagé entre les étudiants de l'EPL. Vous y trouverez des documents de cours, des syllabus, des anciens examens pour vous entraîner et bien plus encore."
 					}))
 				}
 			}
