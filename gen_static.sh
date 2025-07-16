@@ -16,7 +16,7 @@ cp discord.html static/discord/index.html
 mkdir static/drive/
 cp drive.html static/drive/index.html
 mkdir static/drive-contributions/
-cp drive.html static/drive-contributions/index.html
+cp drive-contributions.html static/drive-contributions/index.html
 
 killall eplstudents-website || true
 cargo build
