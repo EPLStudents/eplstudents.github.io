@@ -12,12 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     concurrency: ci-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v4.1.7 # This action checks out your repository
+      - uses: actions/checkout@v4 # This action checks out your repository
       - name: Run gen_static.sh script
         run: sh gen_static.sh
       - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.6.8
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: static
           clean: true
+          force: true
