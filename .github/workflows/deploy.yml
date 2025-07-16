@@ -15,6 +15,10 @@ jobs:
       - uses: actions/checkout@v4 # This action checks out your repository
       - name: Run gen_static.sh script
         run: sh gen_static.sh
+      - name: Debug Git State
+        run: |
+          git remote show origin
+          git ls-remote --refs origin
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
