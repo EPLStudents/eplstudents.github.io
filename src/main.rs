@@ -85,7 +85,6 @@ fn button(handle: &'static str, link: &'static str, icon: PreEscaped<&str>) -> M
 
 const EPLWIKI_IMG_SRC:   &str = "/public/thumbnails/eplwiki.png";
 const DISCORD_IMG_SRC:   &str = "/public/thumbnails/discord.png";
-const UCLOUVAINDOWN_IMG_SRC: &str = "/public/thumbnails/uclouvain-down.png";
 const REVUE_IMG_SRC: &str = "/public/thumbnails/revue.png";
 const ICPC_IMG_SRC: &str = "/public/thumbnails/icpc.png";
 const DEF_CON_GROUP_3210_IMG_SRC: &str = "/public/thumbnails/defcon.png";
