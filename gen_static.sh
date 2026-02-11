@@ -13,6 +13,8 @@ cp CNAME static/CNAME
 
 mkdir static/discord/
 cp discord.html static/discord/index.html
+mkdir static/discord-sinf/
+cp discord-sinf.html static/discord-sinf/index.html
 mkdir static/drive/
 cp drive.html static/drive/index.html
 mkdir static/drive-contributions/
