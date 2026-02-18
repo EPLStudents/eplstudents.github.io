@@ -11,20 +11,16 @@ mkdir -p static
 cp -r public static/public
 cp CNAME static/CNAME
 
+for item in \
+  "/discord/ discord.html" \
+  "/discord-sinf/ discord-sinf.html" \
+  "/drive/ drive.html" \
+  "/drive-contributions/ drive-contributions.html" \
+  "/sharepoint-epl/ sharepoint-epl.html"
+do
+  route=$(echo "$item" | cut -d' ' -f1)
+  source=$(echo "$item" | cut -d' ' -f2)
 
-# array of (route, source) pairs
-array=(
-	"/discord/ discord.html"
-	"/discord-sinf/ discord-sinf.html"
-  	"/drive/ drive.html"
-  	"/drive-contributions/ drive-contributions.html"
-  	"/sharepoint-epl/ sharepoint-epl.html"
-)
-
-for item in "${array[@]}"; do
-  route=$(echo $item | cut -d' ' -f1)
-  source=$(echo $item | cut -d' ' -f2)
-  
   mkdir -p "static$route"
   cp "$source" "static$route/index.html"
 done
