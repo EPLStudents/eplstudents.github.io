@@ -116,7 +116,7 @@ fn index() -> Markup {
 						"Le Drive EPL est un espace de stockage partagé entre les étudiants de l'EPL. Vous y trouverez des documents de cours, des syllabus, des anciens examens pour vous entraîner et bien plus encore."
 					}))
 					(project("SharePoint EPL", "https://epl-students.be/sharepoint-epl", SHAREPOINT_IMG_SRC, html! {
-						"Le SharePoint EPL est site d'information géré par les autorités de l'EPL. Vous y trouverez les dernières informations officielles communiquées par l'EPL."
+						"Le SharePoint EPL est un site d'information géré par les autorités de l'EPL. Vous y trouverez les dernières informations officielles communiquées par l'EPL."
 					}))
 					(project("La revue des Ingénieurs", "https://revuedesingenieurs.be/", REVUE_IMG_SRC, html! {
 						"La seule et unique revue des ingénieurs ! Vous pourrez retrouver les chansons de la revue, des photos, des archives et bien plus encore !"
