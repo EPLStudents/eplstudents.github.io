@@ -90,6 +90,7 @@ const ICPC_IMG_SRC: &str = "/public/thumbnails/icpc.png";
 const DEF_CON_GROUP_3210_IMG_SRC: &str = "/public/thumbnails/defcon.png";
 const ADE_SCHEDULER_IMG_SRC: &str = "/public/thumbnails/ade-scheduler.jpg";
 const DRIVE_IMG_SRC : &str = "/public/thumbnails/drive.png";
+const SHAREPOINT_IMG_SRC : &str = "/public/thumbnails/sharepoint.png";
 
 #[get("/")]
 fn index() -> Markup {
@@ -113,6 +114,9 @@ fn index() -> Markup {
 					}))
 					(project("Drive EPL", "https://epl-students.be/drive", DRIVE_IMG_SRC, html! {
 						"Le Drive EPL est un espace de stockage partagé entre les étudiants de l'EPL. Vous y trouverez des documents de cours, des syllabus, des anciens examens pour vous entraîner et bien plus encore."
+					}))
+					(project("SharePoint EPL", "https://epl-students.be/sharepoint-epl", SHAREPOINT_IMG_SRC, html! {
+						"Le SharePoint EPL est site d'information géré par les autorités de l'EPL. Vous y trouverez les dernières informations officielles communiquées par l'EPL."
 					}))
 					(project("La revue des Ingénieurs", "https://revuedesingenieurs.be/", REVUE_IMG_SRC, html! {
 						"La seule et unique revue des ingénieurs ! Vous pourrez retrouver les chansons de la revue, des photos, des archives et bien plus encore !"

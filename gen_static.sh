@@ -11,14 +11,23 @@ mkdir -p static
 cp -r public static/public
 cp CNAME static/CNAME
 
-mkdir static/discord/
-cp discord.html static/discord/index.html
-mkdir static/discord-sinf/
-cp discord-sinf.html static/discord-sinf/index.html
-mkdir static/drive/
-cp drive.html static/drive/index.html
-mkdir static/drive-contributions/
-cp drive-contributions.html static/drive-contributions/index.html
+
+# array of (route, source) pairs
+array=(
+  "/discord/ discord.html"
+  "/discord-sinf/ discord-sinf.html"
+  "/drive/ drive.html"
+  "/drive-contributions/ drive-contributions.html"
+  "/sharepoint-epl/ sharepoint-epl.html"
+)
+
+for item in "${array[@]}"; do
+  route=$(echo $item | cut -d' ' -f1)
+  source=$(echo $item | cut -d' ' -f2)
+  
+  mkdir -p "static$route"
+  cp "$source" "static$route/index.html"
+done
 
 killall eplstudents-website || true
 cargo build
