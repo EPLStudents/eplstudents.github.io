@@ -14,11 +14,11 @@ cp CNAME static/CNAME
 
 # array of (route, source) pairs
 array=(
-  "/discord/ discord.html"
-  "/discord-sinf/ discord-sinf.html"
-  "/drive/ drive.html"
-  "/drive-contributions/ drive-contributions.html"
-  "/sharepoint-epl/ sharepoint-epl.html"
+	"/discord/ discord.html"
+	"/discord-sinf/ discord-sinf.html"
+  	"/drive/ drive.html"
+  	"/drive-contributions/ drive-contributions.html"
+  	"/sharepoint-epl/ sharepoint-epl.html"
 )
 
 for item in "${array[@]}"; do
