@@ -108,15 +108,14 @@ fn index() -> Markup {
 					(project("SharePoint EPL", "https://epl-students.be/sharepoint-epl", SHAREPOINT_IMG_SRC, html! {
 						"Le SharePoint EPL est un site d'information géré par les autorités de l'EPL. Vous y trouverez les dernières informations officielles communiquées par l'EPL."
 					}))
-					(project("EPLWiki", "https://wiki.epl-students.be", EPLWIKI_IMG_SRC, html! {
-						"Un recueil d'explications, de conseils et d'astuces sur la vie à l'EPL. "
+					(project("Drive EPL", "https://epl-students.be/drive", DRIVE_IMG_SRC, html! {
+						"Le Drive EPL est un espace de stockage partagé entre les étudiants de l'EPL. Vous y trouverez des documents de cours, des syllabus, des anciens examens pour vous entraîner et bien plus encore."
 					}))
-
 					(project("Discord EPL", "https://epl-students.be/discord", DISCORD_IMG_SRC, html! {
 						"Le Discord des étudiants ingénieurs de l'EPL. N'hésitez pas à nous rejoindre !"
 					}))
-					(project("Drive EPL", "https://epl-students.be/drive", DRIVE_IMG_SRC, html! {
-						"Le Drive EPL est un espace de stockage partagé entre les étudiants de l'EPL. Vous y trouverez des documents de cours, des syllabus, des anciens examens pour vous entraîner et bien plus encore."
+					(project("EPLWiki", "https://wiki.epl-students.be", EPLWIKI_IMG_SRC, html! {
+						"Un recueil d'explications, de conseils et d'astuces sur la vie à l'EPL. "
 					}))
 					(project("La revue des Ingénieurs", "https://revuedesingenieurs.be/", REVUE_IMG_SRC, html! {
 						"La seule et unique revue des ingénieurs ! Vous pourrez retrouver les chansons de la revue, des photos, des archives et bien plus encore !"
