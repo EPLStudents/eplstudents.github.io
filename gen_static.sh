@@ -17,7 +17,7 @@ for item in \
   "/drive/ drive.html" \
   "/drive-contributions/ drive-contributions.html" \
   "/sharepoint-epl/ sharepoint-epl.html" \
-  "/banquet-map/ banquet-map.html" \
+  "/banquet-map/ banquet-map.html"
 do
   route=$(echo "$item" | cut -d' ' -f1)
   source=$(echo "$item" | cut -d' ' -f2)
